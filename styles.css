@@ -12,13 +12,11 @@ body {
   align-items: center;
   height: 100vh;
 }
-.board {
-  --cell-size: 12vmin;
-  --cell-gap: 2vmin;
+#board {
   --cell-border-radius: 0.5vmin;
   display: grid;
-  grid-template-rows: repeat(4, var(--cell-size));
-  grid-template-columns: repeat(4, var(--cell-size));
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
   gap: var(--cell-gap);
   background-color: #bbada0;
   border-radius: var(--cell-border-radius);
@@ -30,7 +28,7 @@ body {
   border-radius: var(--cell-border-radius);
 }
 .tile {
-  --x: 1;
+  --x: 0;
   --y: 2;
   --background-color-lightness: 20%;
   --text-color-lightness: 80%;
