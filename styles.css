@@ -28,8 +28,6 @@ body {
   border-radius: var(--cell-border-radius);
 }
 .tile {
-  --x: 0;
-  --y: 2;
   --background-color-lightness: 20%;
   --text-color-lightness: 80%;
   display: flex;
