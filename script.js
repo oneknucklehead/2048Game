@@ -4,5 +4,5 @@ import Tile from './Tile.js'
 const gameBoard = document.getElementById('board')
 
 const grid = new Grid(gameBoard)
-grid.randomEmptyCells().tile = new Tile(gameBoard)
-grid.randomEmptyCells().tile = new Tile(gameBoard)
+grid.randomEmptyCell().tile = new Tile(gameBoard)
+grid.randomEmptyCell().tile = new Tile(gameBoard)

@@ -7,7 +7,7 @@ export default class Grid {
     gridElement.style.setProperty('--grid-size', GRID_SIZE)
     gridElement.style.setProperty('--cell-size', `${CELL_SIZE}vmin`)
     gridElement.style.setProperty('--cell-gap', `${CELL_GAP}vmin`)
-    this.#cells = createCellElement(gridElement).map((cellElement, index) => {
+    this.#cells = createCellElements(gridElement).map((cellElement, index) => {
       return new Cell(
         cellElement,
         index % GRID_SIZE,
@@ -19,17 +19,17 @@ export default class Grid {
   get #emptyCells() {
     return this.#cells.filter((cell) => cell.tile == null)
   }
-  randomEmptyCells() {
+  randomEmptyCell() {
     const randomIndex = Math.floor(Math.random() * this.#emptyCells.length)
     return this.#emptyCells[randomIndex]
   }
 }
 
 class Cell {
+  #cellElement
   #x
   #y
   #tile
-  #cellElement
   constructor(cellElement, x, y) {
     this.#cellElement = cellElement
     this.#x = x
@@ -46,7 +46,7 @@ class Cell {
   }
 }
 
-function createCellElement(gridElement) {
+function createCellElements(gridElement) {
   const cells = []
   for (let i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
     const cell = document.createElement('div')

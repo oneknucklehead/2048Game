@@ -28,20 +28,22 @@ body {
   border-radius: var(--cell-border-radius);
 }
 .tile {
-  --background-color-lightness: 20%;
-  --text-color-lightness: 80%;
+  /* --background-color-lightness: 20%;
+  --text-color-lightness: 80%; */
+  /* --x: 0;
+  --y: 3; */
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: var(--cell-size);
   height: var(--cell-size);
+  background-color: hsl(28, 40%, var(--background-color-lightness));
   border-radius: var(--cell-border-radius);
   top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
   left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
-  position: absolute;
-  font-size: 4.5vmin;
   font-weight: 600;
-  background-color: hsl(28, 40%, var(--background-color-lightness));
+  font-size: 4.5vmin;
   color: hsl(28, 20%, var(--text-color-lightness));
   transition: ease-in-out;
   animation: pop 300ms ease-in-out;
