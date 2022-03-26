@@ -45,7 +45,7 @@ body {
   font-weight: 600;
   font-size: 4.5vmin;
   color: hsl(28, 20%, var(--text-color-lightness));
-  transition: ease-in-out;
+  transition: 100ms ease-in-out;
   animation: pop 300ms ease-in-out;
 }
 @keyframes pop {
